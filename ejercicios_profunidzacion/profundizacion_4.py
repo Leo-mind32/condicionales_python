@@ -33,3 +33,49 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+palab_1 = str(input("Ingrese la primer palabra: ").lower())
+palab_2 = str(input("Ingrese la segunda palabra: ").lower())
+palab_3 = str(input("Ingrese la tercer palabra: ").lower())
+
+
+print("¿Como desea ordenar las palabras?")
+
+opcion = int(input("SELECCIONE UNA OPCIÓN: 1- Ordenar alfabeticamente o 2- Por cantidad de letras: "))
+
+if opcion == 1:
+    if palab_1 > palab_2 and palab_1 > palab_3:
+        mayor = palab_1
+        if palab_2 > palab_3:
+            intermedia = palab_2
+            menor = palab_3
+        else:
+            intermedia = palab_3
+            menor = palab_2
+        print(f'{mayor}, {intermedia}, {menor}.')
+    
+    elif palab_2 > palab_3:
+        mayor = palab_2
+        if palab_1 > palab_3:
+            intermedia = palab_1
+            menor = palab_3
+        else:
+            intermedia = palab_3
+            menor = palab_1
+        print(f'{mayor}, {intermedia}, {menor}.')
+    
+    else:
+        mayor = palab_3
+        if palab_1 > palab_2:
+            intermedia = palab_1
+            menor = palab_2
+        else:
+            intermedia = palab_2
+            menor = palab_1
+        print(f'{mayor}, {intermedia}, {menor}.')        
+
+
+
+
+
+
+
